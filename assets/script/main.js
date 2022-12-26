@@ -62,7 +62,7 @@ function criaElemento(item){
     numeroItem.dataset.id = item.id
 
     novoItem.appendChild(numeroItem)
-    novoItem.innerHTML += item.nome
+    novoItem.innerHTML += item.nome[0].toUpperCase() + item.nome.substring(1)
     
     novoItem.appendChild(botaoDeleta(item.id))
     
