@@ -1,0 +1,130 @@
+@import url(/assets/css/variaveis.css);
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "century gothic", sans-serif;
+}
+html{
+    background-color: var(--bg-color);
+}
+#wrapper{
+    display: grid;
+    grid-template-areas: 
+    ". . main"
+    "header . main"
+    ". . main"
+    "footer footer footer";
+    grid-template-columns: 1.5fr .5fr 2fr;
+    grid-template-rows: 20vh 50vh 20vh 10vh;
+}
+header{
+    grid-area: header;
+    background-color: var(--salmao);
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+}
+main{
+    grid-area: main;
+    background-color: var(--amarelo);
+    width: 97%;
+    height: 90%;
+    align-self: center;
+    border-radius: 20px;
+    padding: 1.25rem;
+    overflow-x: hidden;
+}
+/* main::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 80%;
+    background-color: gray;
+} */
+main::-webkit-scrollbar {
+    width: 10px;
+    height: 20%;
+}
+
+main::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 50px 10px white;
+    border: solid 3px transparent;
+    border-radius: 20px;
+}
+
+main::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 10px 10px rgba(58, 58, 58, 0.26);
+    border: solid 3px transparent;
+}
+h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+footer{
+    grid-area: footer;
+    background-color: var(--rosa);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+input{
+    width: 90%;
+    margin: 0 auto;
+    height: 3.125rem;
+    border-radius: 10px;
+    border: none;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+}
+textarea:focus,
+input:focus{
+    outline: 1px solid gray;
+}
+label{
+    margin: 0 auto;
+}
+#cadastrar{
+    background-color: var(--rosa);
+    font-weight: bolder;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* ------------------- ITENS ------------------- */
+li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+}
+strong{
+    border-radius: 50%;
+    background-color: var(--marrom);
+    padding: .6rem;
+    margin-right: .7rem;
+}
+.item{
+    width: 100%;
+    background-color: var(--rosa);
+    padding: 1.25rem 0.625rem;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.btn-deleta{
+    padding: .4rem 1rem;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    font-weight: bolder;
+    cursor: pointer;
+    justify-self: end;
+}
+
