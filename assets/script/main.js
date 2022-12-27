@@ -87,7 +87,7 @@ function atualizaElemento(item) {
 function botaoDeleta(id) {
     const botao = document.createElement('button')
     botao.classList.add('btn-deleta')
-    botao.innerHTML = 'X'
+    botao.innerHTML = 'Check'
 
     botao.addEventListener('click', function () {
         deletaElemento(this.parentNode, id) // parentNode: pai do elemento onde a função é chamada \\ pai do botão: li
