@@ -1,7 +1,10 @@
 :root{
     --bg-color: #9ADCFF;
     --amarelo: #FFF89A;
+    --amarelo-opc: #fff89ad3;
     --salmao: #FFB2A6;
+    --salmao-opc: #ffb2a6c5;
     --rosa: #FF8AAE;
+    --rosa-opc: #ff8aad75;
     --marrom: #A97155;
 }

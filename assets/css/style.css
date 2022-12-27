@@ -1,28 +1,31 @@
 @import url(/assets/css/variaveis.css);
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "century gothic", sans-serif;
 }
-html{
+
+html {
     background-color: var(--bg-color);
 }
-#wrapper{
+
+#wrapper {
     display: grid;
-    grid-template-areas: 
-    ". . main"
-    "header . main"
-    ". . main"
-    "footer footer footer";
+    grid-template-areas:
+        ". . main"
+        "header . main"
+        ". . main"
+        "footer footer footer";
     grid-template-columns: 1.5fr .5fr 2fr;
     grid-template-rows: 20vh 50vh 20vh 10vh;
 }
-header{
+
+header {
     grid-area: header;
-    background-color: var(--salmao);
+    background-color: var(--salmao-opc);
     width: 90%;
     height: 90%;
     margin: auto;
@@ -33,17 +36,21 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.363);
 }
-main{
+
+main {
     grid-area: main;
-    background-color: var(--amarelo);
+    background-color: var(--amarelo-opc);
     width: 97%;
     height: 90%;
     align-self: center;
     border-radius: 20px;
     padding: 1.25rem;
     overflow-x: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.363);
 }
+
 /* main::-webkit-scrollbar{
     width: 5px;
     border-radius: 80%;
@@ -64,17 +71,20 @@ main::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 10px 10px rgba(58, 58, 58, 0.26);
     border: solid 3px transparent;
 }
-h2{
+
+h2 {
     text-align: center;
     margin-bottom: 15px;
 }
-footer{
+
+footer {
     grid-area: footer;
     background-color: var(--rosa);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
-input{
+
+input {
     width: 90%;
     margin: 0 auto;
     height: 3.125rem;
@@ -83,14 +93,17 @@ input{
     padding: 0.625rem;
     margin-bottom: 0.625rem;
 }
+
 textarea:focus,
-input:focus{
+input:focus {
     outline: 1px solid gray;
 }
-label{
+
+label {
     margin: 0 auto;
 }
-#cadastrar{
+
+#cadastrar {
     background-color: var(--rosa);
     font-weight: bolder;
     font-size: 1rem;
@@ -98,27 +111,30 @@ label{
 }
 
 /* ------------------- ITENS ------------------- */
-li{
+li {
     list-style: none;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
 }
-strong{
+
+strong {
     border-radius: 50%;
     background-color: var(--marrom);
     padding: .6rem;
     margin-right: .7rem;
 }
-.item{
+
+.Item {
     width: 100%;
-    background-color: var(--rosa);
+    background-color: var(--salmao);
     padding: 1.25rem 0.625rem;
     border-radius: 10px;
     margin-bottom: 10px;
 }
-.btn-deleta{
+
+.btn-deleta {
     padding: .4rem 1rem;
     background-color: red;
     border-radius: 5px;
@@ -127,4 +143,6 @@ strong{
     cursor: pointer;
     justify-self: end;
 }
-
+.opacity{
+    opacity: 0.5 ;
+}
