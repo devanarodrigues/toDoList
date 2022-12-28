@@ -41,8 +41,6 @@ form.addEventListener("submit", (evento) => {
 
         criaElemento(itemAtual)
 
-        checando(document.querySelectorAll(".check"))
-
         itens.push(itemAtual)
     }
 
