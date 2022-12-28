@@ -116,7 +116,6 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
 }
 
 strong {
@@ -132,6 +131,7 @@ strong {
     padding: 1.25rem 0.625rem;
     border-radius: 10px;
     margin-bottom: 10px;
+    transition: opacity .5s;
 }
 
 .btn-deleta {
@@ -143,6 +143,22 @@ strong {
     cursor: pointer;
     justify-self: end;
 }
-.opacity{
-    opacity: 0.5 ;
+.check {
+    padding: .4rem 1rem;
+    background-color: green;
+    border-radius: 5px;
+    border: none;
+    font-weight: bolder;
+    cursor: pointer;
+    justify-self: end;
+    margin-left: 70%;
+    margin-right: .5rem;
 }
+.opacity{
+    opacity: 0.3 ;
+    filter: grayscale(1);
+}
+p{
+    max-width: 0px;
+}
+

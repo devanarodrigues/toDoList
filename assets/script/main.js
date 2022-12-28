@@ -21,7 +21,8 @@ form.addEventListener("submit", (evento) => {
     const itemAtual = {
         // dados do item que acabou de ser enviado
         "nome": nome.value,
-        "quantidade": quantidade.value
+        "quantidade": quantidade.value,
+        "check": false
     }
 
     // ----------------- Criação do elemento caso ele já exista, ou de um novo elemento -----------------
@@ -52,17 +53,18 @@ form.addEventListener("submit", (evento) => {
 })
 
 
+
 // ----------------- Criando elemento CSS -----------------
 function criaElemento(item) {
     const novoItem = document.createElement('li')
     novoItem.classList.add('item')
 
     const numeroItem = document.createElement('strong')
-    if (item.quantidade === ""){
+    if (item.quantidade === "") {
         numeroItem.innerHTML = "01"
-    }else if(item.quantidade < 10){
+    } else if (item.quantidade < 10) {
         numeroItem.innerHTML = 0 + item.quantidade
-    }else{
+    } else {
         numeroItem.innerHTML = item.quantidade
     }
 
@@ -70,8 +72,9 @@ function criaElemento(item) {
     numeroItem.dataset.id = item.id
 
     novoItem.appendChild(numeroItem)
-    novoItem.innerHTML += item.nome[0].toUpperCase() + item.nome.substring(1)
+    novoItem.innerHTML += "<p>" + item.nome[0].toUpperCase() + item.nome.substring(1) + "</p>"
 
+    novoItem.appendChild(check(item.id))
     novoItem.appendChild(botaoDeleta(item.id))
 
     lista.appendChild(novoItem)
@@ -88,12 +91,32 @@ function botaoDeleta(id) {
     const botao = document.createElement('button')
     botao.classList.add('btn-deleta')
     botao.innerHTML = 'X'
-
+    
     botao.addEventListener('click', function () {
         deletaElemento(this.parentNode, id) // parentNode: pai do elemento onde a função é chamada \\ pai do botão: li
     })
 
     return botao
+}
+
+// ----------------- Opacidade e P&B no item -----------------
+function check(id) {
+    const botao = document.createElement('button')
+    botao.classList.add('check')
+    botao.innerText = "Concluir"
+
+    botao.addEventListener('click', function () {
+        opacidade(this.parentNode, id) // parentNode: pai do elemento onde a função é chamada \\ pai do botão: li
+    })
+
+    return botao
+}
+
+function opacidade(tag) {
+    tag.classList.toggle("opacity")
+    
+    // itens.splice(itens.findIndex(tag => tag.id === id), 1, item.check.value = 'true') 
+    // localStorage.setItem("item", JSON.stringify(itens))
 }
 
 // ----------------- Deletando elemento -----------------
@@ -105,3 +128,4 @@ function deletaElemento(tag, id) { // tag: li \\ tag: elemento a ser deletado, i
 
     localStorage.setItem("item", JSON.stringify(itens))
 }
+
