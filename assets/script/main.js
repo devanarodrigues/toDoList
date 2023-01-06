@@ -1,3 +1,7 @@
+
+// opacity 0 com transition e setTimeInterval do mesmo valor da transition quando clicar em deletar
+// apos finalizar o intervalo a transicao vai estar completa e o elemento sera deletado
+
 const form = document.getElementById("novoItem")
 const lista = document.getElementById("lista")
 const itens = JSON.parse(localStorage.getItem("item")) || []
@@ -128,4 +132,5 @@ function deletaElemento(tag, id) { // tag: li \\ tag: elemento a ser deletado, i
 
     localStorage.setItem("item", JSON.stringify(itens))
 }
+
 

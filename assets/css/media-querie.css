@@ -1,0 +1,64 @@
+@media screen and (max-width: 768px) {
+    #wrapper {
+        grid-template-areas:
+            ". header ."
+            ". header ."
+            ". main ."
+            "footer footer footer";
+        grid-template-columns: .2fr 2fr .2fr;
+        grid-template-rows: 20vh 30vh 40vh 10vh;
+    }
+    #cadastrar{
+        height: auto;
+    }
+    main{
+        padding: .5rem;
+    }
+    header {
+        height: 70%;
+        width: 100%;
+    }
+
+    input {
+        width: 90%;
+        height: 2.125rem;
+    }
+
+    li {
+        display: grid;
+        grid-template-areas: 
+        ". . ."
+        "strong p p"
+        ". check delete";
+        grid-template-rows: .1fr 1fr 1fr;
+        grid-template-columns: 50px 1.5fr .5fr;
+
+    }
+
+    p {
+        grid-area: p;
+        text-align: center;
+        text-justify: center;
+    }
+    strong{
+        grid-area: strong;
+    }
+    
+    .check {
+        margin: 10px 0;
+        position: relative;
+        grid-area: check;
+        margin-right: .3rem;
+        /* align-self: flex-end; */
+    }
+    
+    .btn-deleta {
+        /* align-self: flex-end; */
+        padding: 0.4rem 2.45rem;
+        grid-area: delete;
+    }
+
+    .item {
+        padding: .5rem 1rem;
+    }
+}
