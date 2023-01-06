@@ -39,6 +39,7 @@
         grid-area: p;
         text-align: center;
         text-justify: center;
+        display: inline;
     }
     strong{
         grid-area: strong;
