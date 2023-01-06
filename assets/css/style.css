@@ -82,6 +82,7 @@ h2 {
 input {
     width: 90%;
     margin: 0 auto;
+    margin-top: .4rem;
     height: 3.125rem;
     border-radius: 10px;
     border: none;
@@ -95,7 +96,7 @@ input:focus {
 }
 
 label {
-    margin: 0 auto;
+    margin: auto;
 }
 
 #cadastrar {
@@ -105,12 +106,24 @@ label {
     cursor: pointer;
 }
 
+#cadastrar:hover {
+    transform: scale(1.02);
+    filter: saturate(1.5);
+    transition: .1s;
+}
+
 /* ------------------- ITENS ------------------- */
 li {
     list-style: none;
     display: flex;
     flex-direction: row;
     align-items: center;
+    border: 1px solid rgba(156, 156, 156, 0.548);
+}
+
+li:hover {
+    transform: scale(1.02);
+    transition: .2s;
 }
 
 strong {
@@ -158,6 +171,27 @@ strong {
 
 p {
     max-width: 0px;
+}
+
+@keyframes icon2 {
+    0% {
+        transform: translateY(-7px);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+
+    100% {
+        transform: translateY(-7px);
+    }
+}
+
+.coracao {
+    animation: icon2 3s infinite ease;
+    position: absolute;
+    margin-left: .5rem;
+    margin-bottom: 5px;
 }
 
 /*--========================== RODAPE ==========================--*/
