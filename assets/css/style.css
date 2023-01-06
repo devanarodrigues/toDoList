@@ -1,4 +1,5 @@
 @import url(/assets/css/variaveis.css);
+@import url(/assets/css/media-querie.css);
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
 
 * {
@@ -77,12 +78,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-footer {
-    grid-area: footer;
-    background-color: var(--rosa);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
 
 input {
     width: 90%;
@@ -136,16 +131,17 @@ strong {
 
 .btn-deleta {
     padding: .4rem 1rem;
-    background-color: red;
+    background-color: var(--vermelho);
     border-radius: 5px;
     border: none;
     font-weight: bolder;
     cursor: pointer;
     justify-self: end;
 }
+
 .check {
     padding: .4rem 1rem;
-    background-color: green;
+    background-color: var(--verde);
     border-radius: 5px;
     border: none;
     font-weight: bolder;
@@ -154,11 +150,47 @@ strong {
     margin-left: 70%;
     margin-right: .5rem;
 }
-.opacity{
-    opacity: 0.3 ;
+
+.opacity {
+    opacity: 0.3;
     filter: grayscale(1);
 }
-p{
+
+p {
     max-width: 0px;
 }
 
+/*--========================== RODAPE ==========================--*/
+
+footer {
+    grid-area: footer;
+    background-color: var(--rosa);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center;
+    font-size: .9em;
+    padding-top: 10px;
+}
+
+footer span {
+    display: inline;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.856);
+}
+
+.rodape a {
+    margin-left: 10px;
+    width: 32px;
+    text-decoration: none;
+    display: inline;
+}
+
+.fa-github,
+.fa-linkedin {
+    color: rgba(0, 0, 0, 0.856);
+}
