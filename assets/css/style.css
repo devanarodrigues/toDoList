@@ -35,7 +35,7 @@ header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-self: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.363);
 }
@@ -52,11 +52,6 @@ main {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.363);
 }
 
-/* main::-webkit-scrollbar{
-    width: 5px;
-    border-radius: 80%;
-    background-color: gray;
-} */
 main::-webkit-scrollbar {
     width: 10px;
     height: 20%;
@@ -73,11 +68,12 @@ main::-webkit-scrollbar-thumb {
     border: solid 3px transparent;
 }
 
+
+
 h2 {
     text-align: center;
     margin-bottom: 15px;
 }
-
 
 input {
     width: 90%;
@@ -97,6 +93,7 @@ input:focus {
 
 label {
     margin: auto;
+    width: 100%;
 }
 
 #cadastrar {
@@ -128,7 +125,7 @@ li:hover {
 
 strong {
     border-radius: 50%;
-    background-color: var(--marrom);
+    background-color: var(--cinza);
     padding: .6rem;
     margin-right: .7rem;
 }
@@ -141,6 +138,8 @@ strong {
     margin-bottom: 10px;
     transition: opacity .5s;
 }
+
+
 
 .btn-deleta {
     padding: .4rem 1rem;
@@ -164,37 +163,20 @@ strong {
     margin-right: .5rem;
 }
 
+
+
 .opacity {
     opacity: 0.3;
-    filter: grayscale(1);
+    filter: hue-rotate(90deg);
 }
 
 p {
     max-width: 0px;
 }
 
-@keyframes icon2 {
-    0% {
-        transform: translateY(-7px);
-    }
-
-    50% {
-        transform: translateY(7px);
-    }
-
-    100% {
-        transform: translateY(-7px);
-    }
-}
-
-.coracao {
-    animation: icon2 3s infinite ease;
-    position: absolute;
-    margin-left: .5rem;
-    margin-bottom: 5px;
-}
-
 /*--========================== RODAPE ==========================--*/
+
+
 
 footer {
     grid-area: footer;
@@ -227,4 +209,9 @@ footer span {
 .fa-github,
 .fa-linkedin {
     color: rgba(0, 0, 0, 0.856);
+}
+
+.coracao {
+    position: absolute;
+    margin-left: .5rem;
 }
